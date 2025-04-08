@@ -1,0 +1,129 @@
+/* src/styles/ExperienceCard.module.css */
+.experienceCard {
+  background-color: var(--background-secondary);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+
+.experienceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Timeline styles */
+.experienceTimeline {
+  position: relative;
+  width: 24px;
+  flex-shrink: 0;
+}
+
+.timelineDot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 18px;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: var(--primary-color-light);
+  transform: translateX(-50%);
+  opacity: 0.3;
+}
+
+/* Content styles */
+.experienceContent {
+  flex: 1;
+}
+
+.experienceHeader {
+  margin-bottom: 15px;
+}
+
+.company {
+  color: var(--primary-color-dark);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.title {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.period {
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.achievements {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.achievements li {
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+  padding-left: 20px;
+  position: relative;
+}
+
+.achievements li::before {
+  content: "•";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .experienceCard {
+    padding: 15px;
+  }
+
+  .experienceTimeline {
+    width: 16px;
+  }
+
+  .timelineDot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .achievements li {
+    font-size: 0.95rem;
+  }
+}

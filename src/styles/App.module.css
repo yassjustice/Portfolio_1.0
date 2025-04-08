@@ -1,0 +1,91 @@
+/* Root Layout */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-primary);
+}
+
+/* Main Content Area */
+.mainContent {
+  flex: 1;
+  width: 100%;
+  margin-top: var(--navbar-height, 80px);
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Container Widths */
+@media (min-width: 1440px) {
+  .mainContent {
+    max-width: var(--container-width, 1200px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1439px) {
+  .mainContent {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: calc(var(--navbar-height, 80px) - 20px);
+  }
+}
+
+/* Focus Styles for Accessibility */
+.app :focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Smooth Scrolling */
+.app {
+  scroll-behavior: smooth;
+}
+
+/* Loading State */
+.app.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Page Transitions */
+.app .page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.app .page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.app .page-exit {
+  opacity: 1;
+}
+
+.app .page-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+/* Print Styles */
+@media print {
+  .app {
+    background: white;
+  }
+
+  .mainContent {
+    margin: 0;
+    padding: 0;
+  }
+}

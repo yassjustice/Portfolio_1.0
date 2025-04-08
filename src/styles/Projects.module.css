@@ -1,0 +1,129 @@
+.projectsPage {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projectsHero {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.pageTitle {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.projectsFilter {
+  margin-bottom: 3rem;
+}
+
+.filterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.filterButton {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 25px;
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterButton.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.filterButton:hover {
+  background: var(--primary-color-light);
+  color: white;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.noProjects {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+}
+
+.noProjects h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.noProjects p {
+  color: var(--text-secondary);
+}
+
+.contactCta {
+  margin-top: 4rem;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: var(--background-secondary);
+  border-radius: 1rem;
+}
+
+.ctaContent h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.ctaContent p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: var(--primary-color-dark);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+  
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .filterContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filterButton {
+    width: 100%;
+  }
+}

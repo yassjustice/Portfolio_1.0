@@ -1,0 +1,298 @@
+/* src/styles/Home.module.css */
+.homeContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    color: var(--primary-color-dark);
+    margin-bottom: 50px;
+    position: relative;
+  }
+  
+  .sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--primary-color);
+  }
+  
+  .featuredSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 50px 0;
+  }
+  
+  .statCard {
+    background-color: var(--background-secondary);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .statCard:hover {
+    transform: translateY(-10px);
+  }
+  
+  .statValue {
+    color: var(--primary-color-dark);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .statLabel {
+    color: var(--text-secondary);
+  }
+
+.homePage {
+  min-height: 100vh;
+  background-color: var(--background-primary);
+}
+
+/* Featured Projects Section */
+.featuredProjects {
+  padding: var(--section-padding) 2rem;
+  background-color: var(--background-secondary);
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: var(--container-width);
+  margin: 0 auto 4rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.sectionSubtitle {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 1rem auto 0;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.viewAllContainer {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.viewAllLink {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.viewAllLink:hover {
+  background-color: var(--primary-color-dark);
+  transform: translateY(-2px);
+}
+
+/* About Preview Section */
+.aboutPreview {
+  padding: var(--section-padding) 2rem;
+  background-color: var(--background-primary);
+}
+
+.aboutContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  align-items: center;
+}
+
+.aboutText {
+  padding-right: 2rem;
+}
+
+.aboutDescription {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+}
+
+.readMoreLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.readMoreLink:hover {
+  color: var(--primary-color-dark);
+  gap: 1rem;
+}
+
+.aboutImage {
+  position: relative;
+}
+
+.aboutImage img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+}
+
+.aboutImage::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+  opacity: 0.1;
+  z-index: -1;
+}
+
+/* Contact Preview Section */
+.contactPreview {
+  padding: var(--section-padding) 2rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color-dark) 100%);
+  color: white;
+  text-align: center;
+}
+
+.contactContent {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.contactContent .sectionTitle {
+  color: white;
+}
+
+.contactContent .sectionTitle::after {
+  background-color: white;
+}
+
+.contactText {
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+  opacity: 0.9;
+}
+
+.contactButton {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: white;
+  color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contactButton:hover {
+  background-color: var(--background-secondary);
+  transform: translateY(-2px);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .aboutContent {
+    gap: 3rem;
+  }
+
+  .aboutText {
+    padding-right: 0;
+  }
+
+  .sectionTitle {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .featuredProjects,
+  .aboutPreview,
+  .contactPreview {
+    padding: var(--section-padding-mobile) 1rem;
+  }
+
+  .aboutContent {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .aboutText {
+    order: 2;
+  }
+
+  .aboutImage {
+    order: 1;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .readMoreLink {
+    justify-content: center;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+
+  .contactButton {
+    width: 100%;
+    text-align: center;
+  }
+}

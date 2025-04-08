@@ -1,0 +1,140 @@
+/* src/styles/theme.css */
+:root {
+  /* Colors */
+  --primary-color: #2ecc71;        /* Vibrant Green */
+  --primary-color-dark: #27ae60;   /* Darker Green */
+  --primary-color-light: #3498db;  /* Energetic Blue */
+  
+  --accent-color: #e74c3c;         /* Powerful Red */
+  --accent-color-light: #f39c12;   /* Energetic Orange */
+  
+  --text-primary: #2c3e50;         /* Deep Charcoal */
+  --text-secondary: #34495e;       /* Soft Charcoal */
+  
+  --background-primary: #f0f4f8;   /* Light Cool Gray */
+  --background-secondary: #ffffff; /* Pure White */
+  --background-tertiary: #e9ecef;  /* Light Gray */
+  
+  --border-color: rgba(0, 0, 0, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  
+  /* Layout & Spacing */
+  --container-width: 1200px;
+  --navbar-height: 80px;
+  --section-padding: 6rem;
+  --section-padding-mobile: 4rem;
+  
+  /* Border Radius */
+  --border-radius: 8px;
+  --border-radius-lg: 16px;
+  --border-radius-sm: 4px;
+  
+  /* Typography */
+  --font-base: 16px;
+  --font-family: 'Inter', 'Segoe UI', sans-serif;
+  
+  /* Z-index Layers */
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal-backdrop: 1040;
+  --z-index-modal: 1050;
+  --z-index-popover: 1060;
+  --z-index-tooltip: 1070;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  
+  /* Transitions */
+  --transition-base: 0.3s ease;
+  --transition-smooth: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Breakpoints */
+  --mobile-breakpoint: 768px;
+  --tablet-breakpoint: 1024px;
+  --desktop-breakpoint: 1440px;
+}
+
+/* Dark Theme Variables (if needed) */
+[data-theme="dark"] {
+  --primary-color: #2ecc71;
+  --primary-color-dark: #27ae60;
+  --primary-color-light: #3498db;
+  
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  
+  --background-primary: #1a1a1a;
+  --background-secondary: #2d2d2d;
+  --background-tertiary: #363636;
+  
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Focus Styles */
+:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Base Font Size Responsive Adjustments */
+@media (max-width: 768px) {
+  :root {
+    --font-base: 14px;
+    --container-width: 100%;
+    --navbar-height: 60px;
+  }
+}
+
+/* Global Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all var(--motion-speed) ease;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--background-primary);
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-title {
+  color: var(--primary-color-dark);
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--primary-color);
+}
+
+/* Athletic & Dynamic Hover Effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
