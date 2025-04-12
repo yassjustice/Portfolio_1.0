@@ -66,7 +66,7 @@ const Contact = () => {
               whileHover={{ x: 5 }}
             >
               <FaEnvelope />
-              <a href="mailto:your.email@example.com">your.email@example.com</a>
+              <a href="mailto:yassirhakimi60@gmail.com">yassirhakimi60@gmail.com</a>
             </motion.div>
             
             <motion.div 
@@ -74,13 +74,13 @@ const Contact = () => {
               whileHover={{ x: 5 }}
             >
               <FaMapMarkerAlt />
-              <span>Your Location, Country</span>
+              <span>Sala Al Jadida, Morocco</span>
             </motion.div>
           </div>
 
           <div className={styles.socialLinks}>
             <motion.a 
-              href="https://github.com/yourusername"
+              href="https://github.com/yassjustice"
               className={styles.socialLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -92,7 +92,7 @@ const Contact = () => {
             </motion.a>
             
             <motion.a 
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/yassir-hakimi-543678217/"
               className={styles.socialLink}
               target="_blank"
               rel="noopener noreferrer"
